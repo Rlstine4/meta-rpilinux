@@ -1,8 +1,29 @@
-require recipes-core/images/core-image-minimal.bb
+DESCRIPTION = "Custom Raspberry Pi 4 image with WiFi, SSH, bash, and systemd networking"
+LICENSE = "MIT"
 
+require recipes-core/images/core-image-base.bb
+
+IMAGE_INSTALL:remove = "packagegroup-base-extended packagegroup-base-wifi wireless-regdb-static"
+
+# Packages to install
 IMAGE_INSTALL += " \
+    bash \
     libstdc++ \
     mtd-utils \
     openssh openssl openssh-sftp-server \
     systemd systemd-analyze \
+    wpa-supplicant \
+    iw \
+    wireless-regdb \
+    linux-firmware-rpidistro-bcm43455 \
+    python3 \
 "
+
+# Enable systemd network services and wpa_supplicant on wlan0
+SYSTEMD_AUTO_ENABLE = "enable"
+SYSTEMD_SERVICE_${PN} += " \
+    systemd-networkd.service \
+    systemd-resolved.service \
+    wpa_supplicant@wlan0.service \
+"
+
