@@ -16,4 +16,5 @@ IMAGE_INSTALL += " \
     linux-firmware-rpidistro-bcm43455 \
     python3 \
     vim-tiny \
+    swupdate \
 "
