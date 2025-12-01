@@ -12,7 +12,7 @@ IMAGE_INSTALL += " \
     systemd systemd-analyze \
     wpa-supplicant \
     iw \
-    wireless-regdb \
+    wireless-regdb-static \
     linux-firmware-rpidistro-bcm43455 \
     python3 \
 "
