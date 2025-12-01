@@ -15,11 +15,5 @@ IMAGE_INSTALL += " \
     wireless-regdb-static \
     linux-firmware-rpidistro-bcm43455 \
     python3 \
-"
-
-SYSTEMD_AUTO_ENABLE = "enable"
-SYSTEMD_SERVICE_${PN} += " \
-    systemd-networkd.service \
-    systemd-resolved.service \
-    wpa_supplicant@wlan0.service \
+    vim-tiny \
 "
