@@ -8,6 +8,8 @@ IMAGE_INSTALL += " \
     bash \
     libstdc++ \
     mtd-utils \
+    coreutils \
+    procps \
     openssh openssl openssh-sftp-server \
     systemd systemd-analyze \
     wpa-supplicant \
