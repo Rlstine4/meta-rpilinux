@@ -12,6 +12,7 @@ IMAGE_INSTALL += " \
     mtd-utils \
     coreutils \
     procps \
+    util-linux-lsblk \
     openssh openssl openssh-sftp-server \
     systemd systemd-analyze \
     wpa-supplicant \
