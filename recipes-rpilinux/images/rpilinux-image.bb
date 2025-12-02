@@ -3,6 +3,8 @@ LICENSE = "MIT"
 
 require recipes-core/images/core-image-base.bb
 
+IMAGE_FEATURES += "package-management"
+
 # Packages
 IMAGE_INSTALL += " \
     bash \
